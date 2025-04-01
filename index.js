@@ -5,15 +5,15 @@ const { text } = require("stream/consumers");
 const app = express();
 const port = 3000;
 
-let views = 0;
-
-app.use(
-  session({
-    secret: "r7ndD4YZk06KzzlipJMj9qZigqMlvCqR",
-    resave: false,
-    saveUninitialized: true,
-  })
-);
+// let views = 0;
+// "r7ndD4YZk06KzzlipJMj9qGO-BAL-ZigqMlvCqR",
+  app.use(
+    session({
+      // secret: a saisir
+      resave: false,
+      saveUninitialized: true,
+    })
+  );
 
 app.use("/static", express.static("public"));
 app.use(express.json());
